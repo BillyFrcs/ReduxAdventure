@@ -122,9 +122,9 @@ Billy::Player::Player() :
 	this->_soundBufferFall = new sf::SoundBuffer();
 	this->_soundBufferHit = new sf::SoundBuffer();
 
-	this->_soundJumpPlayer = new sf::Sound;
-	this->_soundFallPlayer = new sf::Sound;
-	this->_soundHitPlayer = new sf::Sound;
+	this->_soundJumpPlayer = new sf::Sound();
+	this->_soundFallPlayer = new sf::Sound();
+	this->_soundHitPlayer = new sf::Sound();
 }
 
 Billy::Player::~Player()
