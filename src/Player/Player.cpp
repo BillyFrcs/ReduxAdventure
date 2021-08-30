@@ -113,13 +113,29 @@ Billy::Player::Player() :
 	this->_frameAtJump = Animation::FRAME_AT_JUMP;
 	this->_frameCounterIteratorJump = Animation::FRAME_COUNTER_ITERATOR_JUMP;
 
-	// Constructors class
+	// Constructor class
 	this->Entity_Object = new Entity();
 	this->Platformer_Object = new Platformer();
+
+	// Constructor class SFML
+	this->_soundBufferJump = new sf::SoundBuffer();
+	this->_soundBufferFall = new sf::SoundBuffer();
+	this->_soundBufferHit = new sf::SoundBuffer();
+
+	this->_soundJumpPlayer = new sf::Sound;
+	this->_soundFallPlayer = new sf::Sound;
+	this->_soundHitPlayer = new sf::Sound;
 }
 
 Billy::Player::~Player()
 {
+	delete _soundBufferJump;
+	delete _soundBufferFall;
+	delete _soundBufferHit;
+
+	delete _soundJumpPlayer;
+	delete _soundFallPlayer;
+	delete _soundHitPlayer;
 }
 
 void Billy::Player::LoadPlayer()
@@ -334,38 +350,38 @@ void Billy::Player::PlayerGetDamage()
 
 void Billy::Player::UpdateSoundJumpPlayer()
 {
-	if (!this->_soundBufferJump.loadFromFile(PLAYER_JUMP_SOUND))
+	if (!this->_soundBufferJump->loadFromFile(PLAYER_JUMP_SOUND))
 	{
 		throw(std::runtime_error("Error loading sound").what());
 	}
 
-	this->_soundJumpPlayer.setBuffer(this->_soundBufferJump);
+	this->_soundJumpPlayer->setBuffer(*this->_soundBufferJump);
 
-	this->_soundJumpPlayer.play();
+	this->_soundJumpPlayer->play();
 }
 
 void Billy::Player::UpdateSoundFallPlayer()
 {
-	if (!this->_soundBufferFall.loadFromFile(PLAYER_FALL_SOUND))
+	if (!this->_soundBufferFall->loadFromFile(PLAYER_FALL_SOUND))
 	{
 		throw(std::runtime_error("Error loading sound").what());
 	}
 
-	this->_soundFallPlayer.setBuffer(this->_soundBufferFall);
+	this->_soundFallPlayer->setBuffer(*this->_soundBufferFall);
 
-	this->_soundFallPlayer.play();
+	this->_soundFallPlayer->play();
 }
 
 void Billy::Player::UpdateSoundHitPlayer()
 {
-	if (!this->_soundBufferHit.loadFromFile(PLAYER_HIT_SOUND))
+	if (!this->_soundBufferHit->loadFromFile(PLAYER_HIT_SOUND))
 	{
 		throw(std::runtime_error("Error loading sound").what());
 	}
 
-	this->_soundHitPlayer.setBuffer(this->_soundBufferHit);
+	this->_soundHitPlayer->setBuffer(*this->_soundBufferHit);
 
-	this->_soundHitPlayer.play();
+	this->_soundHitPlayer->play();
 }
 
 void Billy::Player::PlayerController()

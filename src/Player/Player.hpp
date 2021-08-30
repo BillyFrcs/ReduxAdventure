@@ -74,13 +74,14 @@ private:
 	sf::Vector3f _playerVelocity;
 	sf::Vector3f _playerJumpVelocity;
 
-	sf::SoundBuffer _soundBufferJump;
-	sf::SoundBuffer _soundBufferFall;
-	sf::SoundBuffer _soundBufferHit;
+	// Sound player
+	sf::SoundBuffer* _soundBufferJump;
+	sf::SoundBuffer* _soundBufferFall;
+	sf::SoundBuffer* _soundBufferHit;
 
-	sf::Sound _soundJumpPlayer;
-	sf::Sound _soundFallPlayer;
-	sf::Sound _soundHitPlayer;
+	sf::Sound* _soundJumpPlayer;
+	sf::Sound* _soundFallPlayer;
+	sf::Sound* _soundHitPlayer;
 
 private:
 	std::vector<sf::Sprite> _maleCharacterVec;
