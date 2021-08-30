@@ -439,7 +439,7 @@ void Billy::Game::GameLoop()
 
 		this->_window.clear(sf::Color::White);
 
-		// Render game
+		// Render game and drawing entities
 		this->Platformer_Object->DrawPlatformer(this->_window);
 
 		this->Player_Object->HealthBarPlayer(this->_window);
