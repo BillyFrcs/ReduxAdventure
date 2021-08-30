@@ -46,7 +46,7 @@ Billy::Enemy::Enemy() :
 	this->_frameAtAttack = Animation::FRAME_AT_ATTACK;
 	this->_frameCounterIteratorAttack = Animation::FRAME_COUNTER_ITERATOR_ATTACK;
 
-	// Class constuctors
+	// Constructor class
 	this->Entity_Object = new Entity();
 	this->Platformer_Object = new Platformer();
 	this->Player_Object = new Player();
