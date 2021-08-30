@@ -217,7 +217,6 @@ void Billy::Game::GameLoop()
 				}
 			}
 		}
-
 		else
 		{
 			// std::cout << "No collision enemy zombie \n"; // DEBUG
@@ -280,7 +279,6 @@ void Billy::Game::GameLoop()
 				}
 			}
 		}
-
 		else
 		{
 			// std::cout << "No collision enemy robot \n"; // DEBUG
@@ -343,7 +341,6 @@ void Billy::Game::GameLoop()
 				}
 			}
 		}
-
 		else
 		{
 			// std::cout << "No collision enemy robot \n"; // DEBUG
@@ -400,7 +397,6 @@ void Billy::Game::GameLoop()
 				this->Player_Object->PlayerSprite().setPosition(this->Platformer_Object->GetGroundBounds().left + this->Platformer_Object->GetGroundBounds().width, this->Player_Object->GetPlayerBounds().top);
 			}
 		}
-
 		else
 		{
 			// std::cout << "No collision ground \n"; // DEBUG
@@ -431,7 +427,6 @@ void Billy::Game::GameLoop()
 				this->Player_Object->PlayerSprite().setPosition(this->Player_Object->GetPlayerBounds().left, this->Platformer_Object->GetRocksTreesBounds().top + this->Platformer_Object->GetRocksTreesBounds().height);
 			}
 		}
-
 		else
 		{
 			// std::cout << "No collision rocks trees \n"; // DEBUG
