@@ -49,7 +49,7 @@ Billy::Game::Game(const float& ScreenWidth, const float& ScreenHeight, const std
 	this->_isPlayerSpawn = new bool(true);
 	this->_isGamePlay = new bool(true);
 
-	// Constructors class
+	// Constructor class
 	this->Platformer_Object = new Platformer();
 	this->Player_Object = new Player();
 	this->Enemies_Object = new Enemies();
@@ -346,7 +346,7 @@ void Billy::Game::GameLoop()
 			// std::cout << "No collision enemy robot \n"; // DEBUG
 		}
 
-		/* Ground collision with player
+		// Ground collision with player
 		if (Collision::PixelPerfectTest(this->Player_Object->PlayerSprite(), this->Platformer_Object->GroundSprite()) == true)
 		{
 			// std::cerr << "Collision ground \n"; // DEBUG
@@ -431,7 +431,6 @@ void Billy::Game::GameLoop()
 		{
 			// std::cout << "No collision rocks trees \n"; // DEBUG
 		}
-		*/
 
 		// Player object
 		this->Player_Object->PlayerAnimation();
