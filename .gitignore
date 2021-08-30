@@ -1,0 +1,11 @@
+# Build system
+bin
+build
+gmon.out
+*.stats
+*.buildconfig
+Thumbs.db
+.DS_Store
+
+# VS Code
+.vscode/ipch
