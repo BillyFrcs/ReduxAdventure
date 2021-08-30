@@ -21,7 +21,6 @@ constexpr auto LAYER_ROCKS = "Assets/Backgrounds/platformer_background_4/Layers/
 constexpr auto LAYER_SKY = "Assets/Backgrounds/platformer_background_4/Layers/layer07_Sky.png";
 
 constexpr auto BACKGROUND = "Assets/Backgrounds/platformer_background_4/platformer_background_4.png";
-// constexpr auto BACKGROUND = "Assets/Backgrounds/platformer_background_1/platformer_background_1.png";
 
 // Player character
 constexpr auto MALE_CHARACTER_SHEET = "Assets/Characters/MaleAdventure/Tilesheet/character_maleAdventurer_sheetHD.png";
