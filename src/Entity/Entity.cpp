@@ -10,6 +10,7 @@ Billy::Entity::Entity() :
 	_textures(),
 	_fonts()
 {
+	// Constructor class SFML
 	this->_soundBufferPlayerSpawn = new sf::SoundBuffer();
 	this->_soundBufferGame = new sf::SoundBuffer();
 
@@ -19,6 +20,11 @@ Billy::Entity::Entity() :
 
 Billy::Entity::~Entity()
 {
+	delete this->_soundBufferPlayerSpawn;
+	delete this->_soundBufferGame;
+
+	delete this->_soundSpawnPlayer;
+	delete this->_soundGame;
 }
 
 void Billy::Entity::LoadTextureGame(std::string Name, std::string FilePath)
