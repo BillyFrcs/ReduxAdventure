@@ -84,7 +84,7 @@ Billy::Enemies::~Enemies()
 }
 
 // ===========================================================
-// Enemy zombie and robot
+// Enemy zombie, robot and male
 // ===========================================================
 void Billy::Enemies::LoadEnemy()
 {
