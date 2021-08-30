@@ -278,7 +278,7 @@ void Billy::Enemies::EnemyGetDamage()
 
 			delete &this->_maleEnemyVec[enemyMale];
 
-			this->_robotEnemyVec.erase(this->_robotEnemyVec.begin() + enemyMale);
+			this->_maleEnemyVec.erase(this->_maleEnemyVec.begin() + enemyMale);
 		}
 	}
 }
