@@ -51,12 +51,10 @@ private:
 	sf::Event _event;
 	sf::View _view;
 
-	sf::Clock _deltaTimeClock;
 	sf::Clock _clockFrameRate;
 	sf::Time _timeFrameRate;
 
 protected:
-	float _deltaTime;
 	float _frameRate;
 
 	bool _isPlayerSpawn;

@@ -14,10 +14,8 @@ Billy::Game::Game(const float& ScreenWidth, const float& ScreenHeight, const std
 	_antiAliasing(),
 	_event(),
 	_view(),
-	_deltaTimeClock(),
 	_clockFrameRate(),
 	_timeFrameRate(),
-	_deltaTime(),
 	_frameRate()
 {
 #if defined(_DEBUG)
@@ -37,14 +35,11 @@ Billy::Game::Game(const float& ScreenWidth, const float& ScreenHeight, const std
 
 	// this->_window.setVerticalSyncEnabled(true);
 
-	// this->_window.setFramerateLimit(60);
+	this->_window.setFramerateLimit(60); // Set frame rate limit to 60
 
 	this->_window.setKeyRepeatEnabled(false);
 
 	this->_platform.setIcon(this->_window.getSystemHandle());
-
-	// Set delta time per frame
-	this->_deltaTime = (1.f / 60.f);
 
 	this->_isPlayerSpawn = new bool(true);
 	this->_isGamePlay = new bool(true);
@@ -109,11 +104,6 @@ void Billy::Game::GameLoop()
 
 	while (this->_window.isOpen())
 	{
-		// Dealing with events delta time
-		this->_deltaTimeClock.getElapsedTime().asSeconds();
-
-		this->_deltaTime = this->_deltaTimeClock.restart().asSeconds();
-
 		while (this->_window.pollEvent(this->_event))
 		{
 			switch (this->_event.type)
