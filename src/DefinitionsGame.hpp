@@ -34,7 +34,7 @@ constexpr auto ROBOT_ENEMY_SHEET = "Assets/Characters/Robot/Tilesheet/character_
 // Male enemy character
 constexpr auto MALE_ENEMY_SHEET = "Assets/Characters/MalePerson/Tilesheet/character_malePerson_sheetHD.png";
 
-	// Music and sound effect game
+	// Sound effect game
 	#define SOUND_GAME ("Assets/Sound/Game.wav")
 	#define PLAYER_SPAWN_SOUND ("Assets/Sound/Spawn.ogg")
 	#define PLAYER_JUMP_SOUND ("Assets/Sound/jump.wav")
