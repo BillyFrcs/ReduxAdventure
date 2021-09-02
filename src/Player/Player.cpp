@@ -8,6 +8,7 @@ static constexpr auto ITERATOR_ATTACK_SPEED = 3.5f;
 static constexpr auto ITERATOR_ATTACK_ULTIMATE_SPEED = 3.5f;
 static constexpr auto ITERATOR_JUMP_SPEED = 5.0f;
 static constexpr auto ITERATOR_ANIMATION = 1.0f;
+static constexpr auto HP_CHARACTER_SIZE = 30.0f;
 
 // Animation
 enum Animation
@@ -55,8 +56,17 @@ Billy::Player::Player() :
 	Platformer_Object(),
 	_maleCharacterSprite(),
 	_clockPlayer(),
+	_hpText(),
+	_hpBarPlayerBackground(),
+	_hpBarPlayer(),
 	_playerVelocity(),
 	_playerJumpVelocity(),
+	_soundBufferJump(),
+	_soundBufferFall(),
+	_soundBufferHit(),
+	_soundJumpPlayer(),
+	_soundFallPlayer(),
+	_soundHitPlayer(),
 	_maleCharacterVec()
 {
 	// Player velocity
@@ -125,6 +135,9 @@ Billy::Player::Player() :
 	this->_soundJumpPlayer = new sf::Sound();
 	this->_soundFallPlayer = new sf::Sound();
 	this->_soundHitPlayer = new sf::Sound();
+
+	this->_hpBarPlayerBackground = new sf::RectangleShape();
+	this->_hpBarPlayer = new sf::RectangleShape();
 }
 
 Billy::Player::~Player()
@@ -140,7 +153,7 @@ Billy::Player::~Player()
 
 void Billy::Player::LoadPlayer()
 {
-	const std::array<std::string, 5> name = { "Male Character Player" };
+	const std::array<std::string, 5> name = { "Male Character Player", "Health Player", "HP: " };
 
 	// Male character player sprite
 	static float scaleVectorX = 0.4f;
@@ -154,6 +167,21 @@ void Billy::Player::LoadPlayer()
 	this->_maleCharacterSprite.setPosition(sf::Vector2f(this->_maleCharacterSprite.getPosition().x + this->_maleCharacterSprite.getGlobalBounds().width / 3.3f, this->_maleCharacterSprite.getPosition().y + this->_maleCharacterSprite.getGlobalBounds().height / 1.0f));
 
 	this->_maleCharacterVec.push_back(sf::Sprite(this->_maleCharacterSprite));
+
+	// Health text
+	sf::Vector3f textPosition;
+
+	textPosition.x = 8.0f;
+	textPosition.y = 75.0f;
+
+	this->Entity_Object->LoadFontGame(name[1], FONT_GAME);
+
+	this->_hpText.setFont(this->Entity_Object->GetFontGame(name[1]));
+	this->_hpText.setOutlineThickness(3.5f);
+	this->_hpText.setOutlineColor(sf::Color({ 32, 32, 32 }));
+	this->_hpText.setPosition(sf::Vector2f({ textPosition.x, textPosition.y }));
+	this->_hpText.setString(name[2]);
+	this->_hpText.setCharacterSize(HP_CHARACTER_SIZE);
 
 	this->PlayerCollision();
 }
@@ -506,12 +534,10 @@ void Billy::Player::PlayerCollision()
 
 void Billy::Player::HealthBarPlayer(sf::RenderTarget& Target)
 {
-	this->_hpBarPlayerBackground = new sf::RectangleShape();
-	this->_hpBarPlayer = new sf::RectangleShape();
-
+	// Health bar
 	sf::Vector3f hpBarPosition;
 
-	hpBarPosition.x = 5.0f;
+	hpBarPosition.x = 65.0f;
 	hpBarPosition.y = 80.0f;
 
 	sf::Vector3f hpBarSize;
@@ -562,4 +588,6 @@ void Billy::Player::DrawPlayer(sf::RenderWindow& Window) const
 {
 	// Draw player character
 	Window.draw(this->_maleCharacterSprite);
+
+	Window.draw(this->_hpText);
 }

@@ -68,6 +68,7 @@ private:
 	sf::Sprite _maleCharacterSprite;
 	sf::Clock _clockPlayer;
 
+	sf::Text _hpText;
 	sf::RectangleShape* _hpBarPlayerBackground;
 	sf::RectangleShape* _hpBarPlayer;
 
