@@ -277,7 +277,7 @@ void Billy::Game::GameLoop()
 		// Enemy male collision with player
 		if (Collision::PixelPerfectTest(this->Player_Object->PlayerSprite(), this->Enemies_Object->EnemyMaleSprite()) == true)
 		{
-			// std::cerr << "Collision enemy robot \n"; // DEBUG
+			// std::cerr << "Collision enemy male \n"; // DEBUG
 
 			//Bottom collision
 			if (this->Player_Object->GetPlayerBounds().top < this->Enemies_Object->GetEnemyMaleBounds().top
@@ -333,7 +333,7 @@ void Billy::Game::GameLoop()
 		}
 		else
 		{
-			// std::cout << "No collision enemy robot \n"; // DEBUG
+			// std::cout << "No collision enemy male \n"; // DEBUG
 		}
 
 		// Ground collision with player
