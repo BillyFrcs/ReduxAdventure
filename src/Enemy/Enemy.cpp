@@ -56,7 +56,13 @@ Billy::Enemy::~Enemy()
 {
 }
 
-Billy::Enemies::Enemies()
+Billy::Enemies::Enemies() :
+	_zombieEnemySprite(),
+	_robotEnemySprite(),
+	_maleEnemySprite(),
+	_zombieEnemyVec(),
+	_robotEnemyVec(),
+	_maleEnemyVec()
 {
 	// Enemy velocity
 	this->_enemyVelocity.x = 1.0f;
