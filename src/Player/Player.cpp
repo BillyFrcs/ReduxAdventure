@@ -542,7 +542,7 @@ void Billy::Player::HealthBarPlayer(sf::RenderTarget& Target)
 
 	sf::Vector3f hpBarSize;
 
-	hpBarSize.x = 200.0f;
+	hpBarSize.x = 150.0f;
 	hpBarSize.y = 30.0f;
 
 	// HP bar player background
