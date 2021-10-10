@@ -1,4 +1,4 @@
-<h1>Redux Adventure</h1>
+<h1 align="center">Redux Adventure</h1>
 
 ![Redux Adventure GamePlay](https://github.com/BillyFrcs/ReduxAdventure/blob/master/Assets/Sample/ReduxAdventure.png)
 
