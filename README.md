@@ -1,6 +1,6 @@
 <h1 align="center">Redux Adventure</h1>
 
-![Redux Adventure GamePlay](https://github.com/BillyFrcs/ReduxAdventure/blob/master/Assets/Sample/ReduxAdventure.png)
+![Redux Adventure GamePlay](https://github.com/BillyFrcs/ReduxAdventure/blob/master/Assets/Sample/Gif/ReduxAdventure.gif)
 
 Redux Adventure is a simple 2D platformer game made with C++ and [SFML](https://www.sfml-dev.org/index.php) library.
 
