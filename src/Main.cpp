@@ -6,5 +6,5 @@ int main(void)
 
 	ReduxAdventure->RunGame();
 
-	return EXIT_SUCCESS && EXIT_FAILURE;
+	return EXIT_SUCCESS;
 }
