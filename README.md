@@ -20,3 +20,7 @@ git clone https://github.com/BillyFrcs/ReduxAdventure.git
 - Please check this [DOCS](https://github.com/BillyFrcs/ReduxAdventure/blob/master/Template/README.md) for more details to setup and configuration this project.
 
 > Get the [SFML Template](https://github.com/andrew-r-king/sfml-vscode-boilerplate) for making games from scratch using Visual Studio Code.
+
+## Assets
+
+Sprites And Textures from [Kenney.nl](https://www.kenney.nl/)
