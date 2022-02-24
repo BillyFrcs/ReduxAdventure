@@ -23,4 +23,4 @@ git clone https://github.com/BillyFrcs/ReduxAdventure.git
 
 ## Assets
 
-Sprites And Textures from [Kenney.nl](https://www.kenney.nl/)
+2D Sprites And Textures from [Kenney.nl](https://www.kenney.nl/)
